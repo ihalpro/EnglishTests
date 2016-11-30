@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import random
-import sys
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "~~~            Тест английского                 ~~~"
 print "~~~           Copyleft iHal 2016                ~~~"
 print "~~~         Для выхода введите \'!\'              ~~~"
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+#TODO: читать слова из файла
 engWords = dict()
 engWords = {"one":"один", "two":"два", "gloves":"перчатки" , "понедельник":"monday" \
 ,"walk":"гулять" ,"sky":"небо" ,"draw":"рисовать" ,"sharpener":"точилка"\
@@ -14,7 +14,6 @@ engWords = {"one":"один", "two":"два", "gloves":"перчатки" , "п�
 "textbook":"учебник" ,"shop":"магазин" ,"umbrella":"зонт" ,"cow":"корова" ,\
 "duck":"утка" ,"goldfish":"золотая рыбка" ,"be ill":"болеть" ,"know":"знать"\
  ,"call":"называть" ,"pet":"питомец" ,"rabbit":"кролик" ,"repair":"ремонтировать" }
-leanWords = dict()
 intQRight=0
 intQWrong=0
 intRight=0
@@ -35,7 +34,7 @@ while(userText != exitWord):
 		if (intQRight>0 or intQWrong>0):
 			print "Правильных ответов: " + str(intQRight) + \
 			". Неверных ответов: " + str(intQWrong)
-			sys.exit()
+#			потом выйдем
 	else:
 		if (userText==engWords.values()[wordPosition]):
 			print "Верно!!!"
@@ -48,4 +47,3 @@ while(userText != exitWord):
 			print ":-( неверно... Это слово " + engWords.values()[wordPosition]
 			intRight=0
 			intQWrong+=1
-			#leanWords.update()
