@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import random
+import sys
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "~~~            Тест английского                 ~~~"
 print "~~~           Copyleft iHal 2016                ~~~"
@@ -34,7 +35,7 @@ while(userText != exitWord):
 		if (intQRight>0 or intQWrong>0):
 			print "Правильных ответов: " + str(intQRight) + \
 			". Неверных ответов: " + str(intQWrong)
-			exit
+			sys.exit()
 	else:
 		if (userText==engWords.values()[wordPosition]):
 			print "Верно!!!"
